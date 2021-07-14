@@ -1,0 +1,268 @@
+h2 {
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+/* header starts  */
+
+.main-header {
+  background-color: rgb(64, 64, 241);
+  display: flex;
+}
+.banner-section {
+  display: flex;
+}
+.banner-title {
+  color: white;
+  margin-top: 100px;
+  margin-left: 110px;
+  font-size: 17px;
+}
+
+.live-button {
+  background-color: rgba(255, 0, 55, 0.685);
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 550;
+  border: 1px solid black;
+  margin-bottom: 500px;
+  transition: 0.4s;
+  margin-top: 10px;
+}
+
+.live-button:hover {
+  background-color: rgba(220, 20, 60, 0.959);
+  transform: scale(1.1);
+  font-size: 20px;
+}
+
+.icon-style {
+  margin: 5px;
+}
+
+.banner-image img {
+  width: 500px;
+  height: auto;
+  margin-left: 500px;
+  margin-top: 50px;
+  transition: 0.4s;
+}
+
+.banner-image img:hover {
+  background-color: rgba(12, 12, 117, 0.856);
+  transform: scale(0.8);
+}
+
+/* header ends */
+
+/* blogs-section */
+
+/* players-container-section-starts */
+
+#players {
+  margin: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#players .box {
+  padding: 34px;
+  margin: 12px 20px;
+  border-radius: 28px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+#players .box img {
+  width: 100%;
+
+  margin: auto;
+  display: block;
+}
+
+#players .box p {
+  font-family: "Bree Serif", serif;
+}
+
+/* players-container-section-ends */
+
+/* photo-galler-section-start */
+
+body {
+  height: 100vh;
+}
+#phtoto-containers {
+  margin-bottom: 450px;
+}
+
+h4 {
+  text-align: center;
+  padding-bottom: 65px;
+  color: hsl(196, 66%, 6%);
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin-top: 50px;
+  font-size: 50px;
+}
+.gallery {
+  width: 1000px;
+  margin: 0 auto;
+  background: gray;
+  position: relative;
+}
+
+.gallery__photo {
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+
+  position: absolute;
+  transition: all 0.2s;
+  z-index: 10;
+  outline-offset: 20px;
+}
+
+.gallery__photo--p1 {
+  top: 0;
+  left: 0;
+}
+
+.gallery__photo--p2 {
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.gallery__photo--p3 {
+  top: 40px;
+  left: 20%;
+}
+
+.gallery__photo--p4 {
+  top: 60px;
+  left: 40%;
+}
+
+.gallery__photo--p5 {
+  top: 40px;
+  left: 60%;
+  z-index: 2;
+}
+
+.gallery__photo:hover {
+  outline: 15px solid #14addc;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05) translateY(-20px);
+  z-index: 20;
+}
+.gallery:hover .gallery__photo:not(:hover) {
+  transform: scale(0.9);
+}
+
+/* photo-galler-section-ends */
+
+/* footer-section-starts */
+
+/* Contact Section */
+#contact {
+  position: relative;
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  background: url("images/players/contact-3.jpg") no-repeat center center/cover;
+}
+#contact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 9px;
+  font-size: 1.1rem;
+}
+
+#contact-box form {
+  width: 40%;
+}
+
+#contact-box label {
+  font-size: 1.3rem;
+  font-family: "Bree Serif", serif;
+}
+
+.h-primary {
+  font-family: "Bree Serif", serif;
+  font-size: 3.8rem;
+  padding: 12px;
+}
+
+.h-secondary {
+  font-family: "Bree Serif", serif;
+  font-size: 2.3rem;
+  padding: 12px;
+}
+
+.center {
+  text-align: center;
+}
+
+.footer-section-2 {
+  text-align: center;
+  background: #ffffff;
+}
+.footer-img {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  clear: both;
+}
+
+.font-icon {
+  font-size: 3.5rem;
+  margin: 10px;
+}
+
+.footer-details {
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+/* footer-section-end*/
+
+/* media-queries-start */
+
+@media only screen and (max-width: 688px) {
+  .main-header {
+    width: 100%;
+  }
+  .banner-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .banner-title,
+  .banner-image {
+    flex-direction: flex;
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  .box {
+    flex-direction: column;
+  }
+
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* media-query-ends */
